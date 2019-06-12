@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style/General_Atrib_Politics.css">
+    <!--  <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo col-md-4">
+            <img class="logo" src="assets/images/LOGOTGIF.jpg">
+        </div>
+        <div class="col-md-8">
+
+        </div>
+
+        <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navigator collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-info" href="Home.html">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Congress 113</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item ext-primary" href="senate-data.html">Senate</a>
+                            <a class="dropdown-item ext-primary" href="House-Data.html">House</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item ext-primary" href="senate-party-loyalty.html">Senate</a>
+                            <a class="dropdown-item ext-primary" href="house-party-loyalty.html">House</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attendance</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item ext-primary" href="senade-attendance.html">Senate</a>
+                            <a class="dropdown-item ext-primary" href="house-attendance.html">House</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section>
+        <div class="col-md-6">
+            <h2>Senators</h2>
+            <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the
+                U.S. Constitution. Each state is represented by two senators, regardless of population, who serve
+                staggered six-year terms. The Senate has several exclusive powers not granted to the House, including
+                consenting to treaties as a precondition to their ratification and consenting to or confirming
+                appointments of Cabinet secretaries, federal judges, other federal executive officials, military
+                officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of
+                federal officials impeached by the House.</p>
+        </div>
+
+        <!-- Dropdown MENU Filtro 2-->
+        <div class="d-inline-flex">
+            <select id="selector" onchange="filterarray()">
+                <option value="All">Choose state</option>
+            </select>
+        </div>
+
+        <!-- CheckBoxes Filtro 1-->
+
+        <div class="d-inline-flex ">
+
+            <div class="form-check-inline">
+                <label class="form-check-label"><input type="checkbox" onclick="filterarray()" id="d"
+                        class="party form-check-input" value="D">Democrata</label>
+            </div>
+
+            <div class="form-check-inline">
+                <label class="form-check-label"><input type="checkbox" id="r" onclick="filterarray()"
+                        class="party form-check-input" value="R">Republican</label>
+            </div>
+
+            <div class="form-check-inline">
+                <label class="form-check-label"><input type="checkbox" id="i" onclick="filterarray()"
+                        class="party form-check-input" value="I">Independet</label>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!--Table container-->
+        <div class="col-md-12">
+            <table class="table table-sm table-hover table-striped table-responsive{-sm|-md|-lg|-xl}" id="divWithTable">
+
+            </table>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="col-md-12  bg-light">
+            <h3 class="text">2016! All rights reserved</h3>
+        </div>
+
+    </footer>
+
+    <!--  <script src=JSON_Senade.js></script> -->
+    <script src=assets/js/Filters_Senade.js> </script> </body> </html>

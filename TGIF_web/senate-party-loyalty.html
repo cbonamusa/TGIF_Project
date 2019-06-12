@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assets/style/General_Atrib_Politics.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo col-md-4">
+      <img class="logo" src="assets/images/LOGOTGIF.jpg" width="80%">
+    </div>
+    <div class="col-md-8">
+
+    </div>
+
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navigator collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-info" href="Home.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Congress 113</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item ext-primary" href="senate-data.html">Senate</a>
+              <a class="dropdown-item ext-primary" href="House-Data.html">House</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item ext-primary" href="senate-party-loyalty.html">Senate</a>
+              <a class="dropdown-item ext-primary" href="house-party-loyalty.html">House</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Attendance</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item ext-primary" href="senade-attendance.html">Senate</a>
+              <a class="dropdown-item ext-primary" href="house-attendance.html">House</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--Table container-->
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Party Loyalty</h2>
+      <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively,
+        tend to be the most faithful in voting for their party's nominee for office and legislation that backs their
+        party's agenda. </p>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Senate at a glance</h2>
+      <!-- <table  class="table table-sm table-hover table-striped table-responsive{-sm|-md|-lg|-xl}" id="table1"></table> -->
+
+      <table id="tableVue" class="table table-sm table-hover table-striped table-responsive{-sm|-md|-lg|-xl}">
+        <thead>
+          <th>Party</th>
+          <th>N. of Reps</th>
+          <th>% Voted w/Party</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Republicans</td>
+            <td>{{R.length}}</td>
+            <td>{{Rpct.toFixed(2) + "%"}}</td>
+          </tr>
+
+          <td>Democrats</td>
+          <td>{{D.length}}</td>
+          <td>{{this.Dpct.toFixed(2)+ "%"}}</td>
+          </tr>
+
+          <tr>
+            <td>Independents</td>
+            <td>{{I.length}}</td>
+            <td>{{this.Ipct.toFixed(2)+ "%"}}</td>
+          </tr>
+
+          <tr>
+            <td>Total</td>
+            <td>{{ R.length + D.length + I.length }}</td>
+            <td>
+              {{((this.Ipct+ this.Rpct + this.Dpct)/3).toFixed(2) + "% "}}
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Most Loyal (Bottom 10% of Party)</h2>
+      <table class="table table-sm table-hover table-striped table-responsive{-sm|-md|-lg|-xl}" id="table2party">
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h2>Least Loyal (Top 10% of Party)</h2>
+      <table class="table table-sm table-hover table-striped table-responsive{-sm|-md|-lg|-xl}" id="table3party">
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="assets/json/JSON_Senade.js"></script>
+  <script src="assets/js/senade-party.js"></script>
+
+
+
+</body>
+
+</html>

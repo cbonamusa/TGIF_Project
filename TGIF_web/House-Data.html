@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/style/General_Atrib_Politics.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo col-md-4">
+            <img class="logo" src="assets/images/LOGOTGIF.jpg">
+        </div>
+        <div class="col-md-8">
+
+        </div>
+
+        <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navigator collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-info" href="Home.html">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Congress 113</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item ext-primary" href="senate-data.html">Senate</a>
+                            <a class="dropdown-item ext-primary" href="House-Data.html">House</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item ext-primary" href="senate-party-loyalty.html">Senate</a>
+                            <a class="dropdown-item ext-primary" href="house-party-loyalty.html">House</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-info" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attendance</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item ext-primary" href="senade-attendance.html">Senate</a>
+                            <a class="dropdown-item ext-primary" href="house-attendance.html">House</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!--Table container-->
+    <section>
+        <div class="col-md-6">
+            <h2>Congressmen</h2>
+            <p>The major power of the House is to pass federal legislation that affects the entire country, although its
+                bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law
+                (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber).
+                The House has some exclusive powers: the power to initiate revenue bills, to impeach officials
+                (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case
+                there is no majority in the Electoral College.</p>
+            <p>Each U.S. state is represented in the House in proportion to its population as measured in the census,
+                but every state is entitled to at least one representative. </p>
+        </div>
+
+        <div class="col-md-12">
+            <table id="jshtmltablelink"
+                class="table table-sm table-hover table-striped table-responsive{-sm|-md|-lg|-xl}">
+                <!-- <thead>
+                    <tr>
+                        <th>Members</th>
+                        <th>First name</th>
+                        <th>Middle name</th>
+                        <th>Last name</th>
+                        <th>Party</th>
+                        <th>Total votes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Robert</td>
+                        <td>B.</td>
+                        <td>Aderholt</td>
+                        <td>R</td>
+                        <td>1192</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Justin</td>
+                        <td>null</td>
+                        <td>Amash</td>
+                        <td>R</td>
+                        <td>1192</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mark</td>
+                        <td>null</td>
+                        <td>Amodei</td>
+                        <td>R</td>
+                        <td>1192</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Alma</td>
+                        <td></td>
+                        <td>Adams</td>
+                        <td>D</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Spencer</td>
+                        <td>null</td>
+                        <td>Bachus</td>
+                        <td>R</td>
+                        <td>1192</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Joe</td>
+                        <td>L.</td>
+                        <td>Barton</td>
+                        <td>R</td>
+                        <td>1192</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Xavier</td>
+                        <td>null</td>
+                        <td>Becerra</td>
+                        <td>D</td>
+                        <td>1192</td>
+                    </tr>
+                </tbody> -->
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="page-footer  bg-light">
+            <h3 class="text">2016! All rights reserved</h3>
+        </div>
+    </footer>
+
+    <script src="assets/json/JSON_House.js"> </script>
+    <script src="assets/js/Filters_HOUSE.js"></script>
+</body>
+
+</html>
