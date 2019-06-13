@@ -1,12 +1,26 @@
+function plusLess() {
+
+  let changes = document.getElementById("plus").getAttribute("class");
+  var text = document.getElementById('plus');
+  console.log(changes)
+  if (changes == "bigplus collapsed") {
+    text.innerHTML = "-";
+    console.log("hola")
+
+  } else if (changes == "bigplus") {
+    text.innerHTML = '+';
+  }
+}
+
 var mydiv2 = document.querySelector("#jshtmltablelink");
 
-function nulldata (element){
-    if (element == null) {
-      return (" ");
-    } else {
-      return element;
-    }
+function nulldata(element) {
+  if (element == null) {
+    return (" ");
+  } else {
+    return element;
   }
+}
 
 var table = `
 <table class="table">
@@ -23,12 +37,12 @@ var table = `
 <tbody>`;
 
 for (i = 0; i < dataHouse.results[0].members.length; i++) {
- const rowHTML = `
+  const rowHTML = `
  <tr>
   <td><a href="${dataHouse.results[0].members[i].url}">
-   ${dataHouse.results[0].members[i].first_name +" "+ 
-   nulldata(dataHouse.results[0].members[i].middle_name)+ " " + 
-   dataHouse.results[0].members[i].last_name}</a></td>
+   ${dataHouse.results[0].members[i].first_name + " " +
+    nulldata(dataHouse.results[0].members[i].middle_name) + " " +
+    dataHouse.results[0].members[i].last_name}</a></td>
 
    <td>${dataHouse.results[0].members[i].party}</td>
    <td>${dataHouse.results[0].members[i].state}</td>
@@ -36,11 +50,11 @@ for (i = 0; i < dataHouse.results[0].members.length; i++) {
    <td>${dataHouse.results[0].members[i].votes_with_party_pct + "%"}</td>
  </tr>`
 
- table += rowHTML;
+  table += rowHTML;
 }
 
-table+= '</tbody>'
+table += '</tbody>'
 table += '</table>'
 
 mydiv2.innerHTML = table;
-document.getElementById("House-Data").innerHTML = JSON.stringify(dataHouse.results[0].members,null,2);
+document.getElementById("House-Data").innerHTML = JSON.stringify(dataHouse.results[0].members, null, 2);
